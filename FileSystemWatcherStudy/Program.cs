@@ -32,12 +32,18 @@ namespace FileSystemWatcherStudy
 
             //Create Folder
 
+            fsw.Created += Fsw_Created;
             fsw.Deleted += Fsw_Deleted;
             fsw.Renamed += Fsw_Renamed;
             fsw.Changed += Fsw_Changed;
             Console.ReadKey();
 
             // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
+        }
+
+        private static void Fsw_Created(object sender, FileSystemEventArgs e)
+        {
+            Console.WriteLine($"New Created Folder/File : {e.Name}");
         }
 
         private static void Fsw_Changed(object sender, FileSystemEventArgs e)
