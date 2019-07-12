@@ -43,12 +43,12 @@ namespace FileSystemWatcherStudy
 
         private static void Fsw_Created(object sender, FileSystemEventArgs e)
         {
-            Console.WriteLine($"New Created Folder/File : {e.Name}");
+            Console.WriteLine($"New Created Folder/File: {e.Name}");
         }
 
         private static void Fsw_Changed(object sender, FileSystemEventArgs e)
         {
-            Console.WriteLine($"Changed Folder/File : {e.Name}");
+            Console.WriteLine($"Changed Folder/File: {e.Name}");
         }
 
         private static void Fsw_Renamed(object sender, RenamedEventArgs e)
